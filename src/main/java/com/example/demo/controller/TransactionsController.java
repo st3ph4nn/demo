@@ -17,12 +17,13 @@ public class TransactionsController {
 
     @CrossOrigin(origins = "http://localhost:8000")
     @GetMapping(path = "/getbalance")
-    public ResponseEntity<Double> getBankAccountBalance(BankAccountModel bankAccount){
-        return ResponseEntity.ok(transactionService.getBalance(bankAccount));
+    public ResponseEntity<BankAccountModel> getBankAccountBalance(BankAccountModel bankAccount){
+        return ResponseEntity.ok(transactionService.getBankAccount(bankAccount));
     }
 
+    @CrossOrigin(origins = "http://localhost:8000")
     @PostMapping(path = "/transaction", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<List<TransactionModel>> getUserByUserName(@RequestBody TransactionModel transaction) {
+    public ResponseEntity<String> sendTransaction( @RequestBody TransactionModel transaction) {
         return ResponseEntity.ok(transactionService.sendTransaction(transaction));
     }
 

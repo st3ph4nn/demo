@@ -6,7 +6,6 @@ import com.example.demo.model.TransactionModel;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @Component
 public class TransactionService implements  TransactionServiceI {
@@ -15,12 +14,12 @@ public class TransactionService implements  TransactionServiceI {
     BankAccountDaoI bankAccountDao;
 
     @Override
-    public double getBalance(BankAccountModel bankAccountModel) {
+    public BankAccountModel getBankAccount(BankAccountModel bankAccountModel) {
         return bankAccountDao.getBalance(bankAccountModel);
     }
 
     @Override
-    public List<TransactionModel> sendTransaction(TransactionModel transaction) {
+    public String sendTransaction(TransactionModel transaction) {
         return bankAccountDao.sendTransaction(transaction);
     }
 
