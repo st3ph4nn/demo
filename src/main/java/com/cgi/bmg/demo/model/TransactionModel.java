@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.cgi.bmg.demo.model;
 
 public class TransactionModel {
 

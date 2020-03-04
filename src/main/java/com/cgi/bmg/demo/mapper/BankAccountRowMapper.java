@@ -1,6 +1,6 @@
-package com.example.demo.mapper;
+package com.cgi.bmg.demo.mapper;
 
-import com.example.demo.model.BankAccountModel;
+import com.cgi.bmg.demo.model.BankAccountModel;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

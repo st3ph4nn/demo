@@ -1,17 +1,17 @@
-package com.example.demo.service;
+package com.cgi.bmg.demo.service;
 
-import com.example.demo.dao.BankAccountDaoI;
-import com.example.demo.model.BankAccountModel;
-import com.example.demo.model.TransactionModel;
+import com.cgi.bmg.demo.dao.IBankAccountDao;
+import com.cgi.bmg.demo.model.BankAccountModel;
+import com.cgi.bmg.demo.model.TransactionModel;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
 @Component
-public class TransactionService implements  TransactionServiceI {
+public class TransactionService implements ITransactionService {
 
     @Resource
-    BankAccountDaoI bankAccountDao;
+    IBankAccountDao bankAccountDao;
 
     @Override
     public BankAccountModel getBankAccount(BankAccountModel bankAccountModel) {

@@ -1,6 +1,6 @@
-package com.example.demo.model;
+package com.cgi.bmg.demo.model;
 
-public class BankAccountModel {
+public class BankAccountModelTest {
 
     private String bankAccountNr;
     private double balance;
@@ -20,5 +20,4 @@ public class BankAccountModel {
     public void setBalance(double balance) {
         this.balance = balance;
     }
-
 }
